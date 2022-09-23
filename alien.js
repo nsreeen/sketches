@@ -18,11 +18,14 @@ function draw() {
   textSize(20);
   let collision = detectCollision();
   if (collision && objects[collision][0] == "🚀") {
-    text("Time to go home! 🚀🚀🚀", 60,200);
+    text("time to go home 🚀🚀🚀", 60,200);
     goHome();
   }
   if (collision && objects[collision][0] == "☄️") {
-    text("Comet is not your friend", 80,200);
+    text("comet is not your friend", 80,200);
+  }
+  if (collision && objects[collision][0] == "🪐") {
+    text("this isn't home", 100,200);
   }
 
   textSize(30);
@@ -36,10 +39,7 @@ function draw() {
     tint(255, 255);
     text(objects[0][0], objects[0][1], objects[0][2]);
     fadeIn = fadeIn < 255 ? fadeIn + 1 : fadeIn;
-
   }
-
-
 }
 
 function goHome(n) {
